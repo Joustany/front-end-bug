@@ -1,11 +1,3 @@
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css">  
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>  
-<script>hljs.initHighlightingOnLoad();</script>  
-<style>
-	.text-red {
-		color: #ff2a4b;
-	}
-</style>  
 # CSS篇
 1. [IOS，通过jquery.html()生成的元素，click事件未触发](#jump1)
 2. [元素不可见，但可以点击触发事件，可能是导致了透明度为0](#jump2)
@@ -22,19 +14,17 @@ $('.container').html('<div class="btn" onclick="javascript:;">');
 ```
 
 ## 2017.06.15 <span id="jump2" class="text-red">-webkit-overflow-scrolling导致的元素切换display:none; display:block;时，元素不可见，但已经出现，可以点击触发事件，可能是导致了透明度为0</span>
-```html
-<style>
-	.container {
-		-webkit-overflow-scrolling: touch;
-		/*
-	    可以增加IOS下滚动的流畅度,
-	    慎用,
-	    可能会导致某些元素透明度为0,
-	    bug级别为最高级,
-	    千万不可全局设置
-	  	*/
-	}
-</style>
+```css
+.container {
+	-webkit-overflow-scrolling: touch;
+	/*
+    可以增加IOS下滚动的流畅度,
+    慎用,
+    可能会导致某些元素透明度为0,
+    bug级别为最高级,
+    千万不可全局设置
+  	*/
+}
 ```
 
 ## 2017.06.19 <span id="jump3" class="text-red">Transform导致的position:fixed元素定位失效，先坍塌后复原</span>
