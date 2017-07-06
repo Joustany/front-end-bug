@@ -1,9 +1,10 @@
 # CSS篇
-1. [IOS，通过jquery.html()生成的元素，click事件未触发](#jump1)
-2. [元素不可见，但可以点击触发事件，可能是导致了透明度为0](#jump2)
-3. [Transform导致的position:fixed元素定位失效，先坍塌后复原](#jump3)
+1. [IOS，通过jquery.html()生成的元素，click事件未触发](#2016.09.29)
+2. [元素不可见，但可以点击触发事件，可能是导致了透明度为0](#2017.06.15)
+3. [Transform导致的position:fixed元素定位失效，先坍塌后复原](#2017.06.19)
 
-## 2016.09.29 <span id="jump1" class="text-red">ISO，通过jquery.html()生成的元素，click事件未触发</span>
+## 2016.09.29
+### ISO，通过jquery.html()生成的元素，click事件未触发
 ```js
 /*
 解决方案
@@ -13,7 +14,8 @@
 $('.container').html('<div class="btn" onclick="javascript:;">');
 ```
 
-## 2017.06.15 <span id="jump2" class="text-red">-webkit-overflow-scrolling导致的元素切换display:none; display:block;时，元素不可见，但已经出现，可以点击触发事件，可能是导致了透明度为0</span>
+## 2017.06.15
+### -webkit-overflow-scrolling导致的元素切换display:none; display:block;时，元素不可见，但已经出现，可以点击触发事件，可能是导致了透明度为0
 ```css
 .container {
 	-webkit-overflow-scrolling: touch;
@@ -27,7 +29,8 @@ $('.container').html('<div class="btn" onclick="javascript:;">');
 }
 ```
 
-## 2017.06.19 <span id="jump3" class="text-red">Transform导致的position:fixed元素定位失效，先坍塌后复原</span>
+## 2017.06.19
+### Transform导致的position:fixed元素定位失效，先坍塌后复原
 ```html
 <style>
 	.container {

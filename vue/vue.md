@@ -1,7 +1,8 @@
 # Vue篇
-1. [IOS下，touch事件无法触发](#jump1)
+1. [IOS下，touch事件无法触发](#2017.06.15)
 
-## 2017.06.15 <span id="jump1" class="text-red">IOS下，touch事件无法触发</span>
+## 2017.06.15 
+### IOS下，touch事件无法触发
 ```html
 <div class="id" ontouchstart="iosScrollBug()" v-cloak></div>
 	
