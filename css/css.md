@@ -2,6 +2,7 @@
 1. [IOS，通过jquery.html()生成的元素，click事件未触发](#20160929)
 2. [元素不可见，但可以点击触发事件，可能是导致了透明度为0](#20170615)
 3. [Transform导致的position:fixed元素定位失效，先坍塌后复原](#20170619)
+4. [微信小程序button组件自带默认样式](#20170421)
 
 ## 2016.09.29
 ### ISO，通过jquery.html()生成的元素，click事件未触发
@@ -54,4 +55,12 @@ $('.container').html('<div class="btn" onclick="javascript:;">');
 <div class="container">
 	<div class="food-guide"></div>
 </div>
+```
+
+## 2018.04.21
+### 微信小程序`<button>`组件自带默认样式
+```css
+button::after {
+	display: none; // 隐藏默认样式
+}
 ```
